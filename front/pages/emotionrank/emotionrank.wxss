@@ -1,5 +1,0 @@
-/* pages/emotionrank/emotionrank.wxss */#mychart-dom-bar{
-  width: 580rpx;
-  height: 660rpx;
-  margin: auto;
-}

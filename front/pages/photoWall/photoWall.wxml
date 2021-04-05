@@ -1,4 +1,0 @@
-<!--pages/photoWall/photoWall.wxml-->
-<view class="photowall">
-  <image class="img" wx:for="{{photos}}" src="{{item.src}}"></image>
-</view>

@@ -1,4 +1,0 @@
-<!--pages/emotionrank/emotionrank.wxml-->
-<view>
-  <canvas canvas-id="mychart-dom-bar" id="mychart-dom-bar"></canvas>
-</view>
