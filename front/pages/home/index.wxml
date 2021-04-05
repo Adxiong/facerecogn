@@ -1,0 +1,39 @@
+<!--pages/home/index.wxml-->
+<view id="main">
+  <view class="nav">
+    <view class="nav-item" bindtap="showCamera">
+      <image src="/image/Launch.png" class="type"></image>
+      launch
+    </view>
+    <view class="nav-item" bindtap="navigateTo" data-path="personalInfo">
+      <image src="/image/information.png" class="type"></image>
+      个人信息
+    </view>
+    <view class="nav-item" bindtap="navigateTo" data-path="photoWall">
+      <image src="/image/photowall.png" class="type"></image>
+      照片墙
+    </view>
+    <view class="nav-item" bindtap="switchTab" data-path="music">
+      <image src="/image/musicwork.png" class="type"></image>
+      音乐作品
+    </view>
+    <view class="nav-item" bindtap="navigateTo" data-path="emotionrank">
+      <image src="/image/musicwork.png" class="type"></image>
+      歌词情感排行
+    </view>
+    <view class="nav-item" bindtap="navigateTo" data-path="ability">
+      <image src="/image/musicwork.png" class="type"></image>
+      能力指数图
+    </view>
+  </view>
+  <view  wx:if="{{CameraStatus}}" class="Container">
+    <camera
+      class="camera"
+      device-position="{{direction}}"
+    ></camera>
+    <mp-icon icon="camera" class="icamera" size="{{25}}" color="white" bindtap="switchCamDir"></mp-icon>
+    <mp-icon icon="close" class="close" size="{{25}}" color="white"
+    bindtap="closeCamera"></mp-icon>
+    <button class="takePhoto" type="primary" bindtap="takePhoto">拍照</button>
+  </view>
+</view>

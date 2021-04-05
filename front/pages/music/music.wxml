@@ -1,0 +1,21 @@
+<!--pages/music/music.wxml-->
+<scroll-view class="music-list">
+  <view class="{{ currentCheck == index ? 'music-item play' : 'music-item' }} " wx:for="{{musiclist}}" bindtap="play" data-no="{{index}}">
+    <view class="name">{{item.title}}</view>
+    <view class="singer">{{item.author}}</view>
+    <mp-icon 
+      wx:if="{{!playStatus || currentCheck!=index}}" 
+      icon="play2"
+      color="{{currentCheck == index? '#e74c3c' : '#7f8c8d'}}"
+    >
+    </mp-icon>
+    <mp-icon 
+      wx:else
+      icon="pause" 
+      color="#e74c3c"
+      catchtap="pause"
+    >
+    </mp-icon>
+  </view>
+
+</scroll-view>
