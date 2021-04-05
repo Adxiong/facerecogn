@@ -1,0 +1,23 @@
+<!--pages/aboutme/about.wxml-->
+<view class="wall">
+  <image src="/image/avatar.jpg"></image>
+</view>
+
+<view class="info">
+  <text class="title">产品介绍：</text>
+  <view class="textarea">
+    本产品调用华为云服务的图像识别，获取人物名称，在百度百科里获取人物基本信息，进行分析。本过程中，没有对任何数据进行过保存，且严禁用户将分析数据用作商业性质活动中。
+  </view>
+</view>
+
+<view class="info">
+  <text class="title">产品使用：</text>
+  <view class="textarea">
+    <text>1.点击拍照识别，可以选择从图库上传也可以选择拍照上传。</text> 
+    <text>2.等待结果，数据会渲染到界面。由于服务器压力，照片墙的数据加载会比较慢。</text>
+  </view>
+</view>
+
+<view class="info">
+  <text class="title green" bindtap="call">联系客服</text>
+</view>

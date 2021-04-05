@@ -1,0 +1,55 @@
+<!--pages/home/index.wxml-->
+<view id="main">
+  <swiper indicator-dots="true" autoplay>
+    <swiper-item> 
+      <text>你对你喜爱的歌手有多了解?</text>
+      <image src="/image/1.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+      <text>没有想不到，只有你找不到</text>
+      <image src="/image/2.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+      <text>海内存知己，天涯若比邻</text>
+      <image src="/image/3.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+      <text>你是夜空中最亮的星</text>
+      <image src="/image/4.jpg" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+  <view class="nav">
+    <view class="nav-item" bindtap="showCamera">
+      <image src="/image/camera.png" class="type"></image>
+      拍照识别
+    </view>
+    <view class="nav-item" bindtap="navigateTo" data-path="personalInfo">
+      <image src="/image/information.png" class="type"></image>
+      个人信息
+    </view>
+    <view class="nav-item" bindtap="navigateTo" data-path="photoWall">
+      <image src="/image/photowall.png" class="type"></image>
+      照片墙
+    </view>
+    <view class="nav-item" bindtap="navigateTo" data-path="emotionrank">
+      <image src="/image/data.png" class="type"></image>
+      作品分析
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="info">
+    <view class="scroll-item" wx:for="{{tips}}">
+      <image src="{{item.m_image_url}}">  </image>
+      <text>{{item.m_title}}</text>
+    </view>
+  </scroll-view>
+  <view  wx:if="{{CameraStatus}}" class="Container">
+    <camera
+      class="camera"
+      device-position="{{direction}}"
+    ></camera>
+    <mp-icon icon="camera" class="icamera" size="{{25}}" color="white" bindtap="switchCamDir"></mp-icon>
+    <mp-icon icon="close" class="close" size="{{25}}" color="white"
+    bindtap="closeCamera"></mp-icon>
+    <button class="takePhoto" type="primary" bindtap="takePhoto">拍照</button>
+  </view>
+</view>

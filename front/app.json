@@ -1,0 +1,37 @@
+{
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "pages": [
+    "pages/home/index",
+    "pages/personalInfo/personalInfo",
+    "pages/photoWall/photoWall",
+    "pages/emotionrank/emotionrank",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3498db",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "人脸识别信息分析"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "/image/home.png",
+        "selectedIconPath": "/image/s_home.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "/image/about.png",
+        "selectedIconPath": "/image/s_about.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap53.json"
+}

@@ -1,0 +1,7 @@
+<!--pages/emotionrank/emotionrank.wxml-->
+<view>
+  <text>歌曲歌词平均情感值</text>
+  <canvas canvas-id="mychart-1" id="mychart-dom-bar"></canvas>
+  <text>歌手主要作品分类占比</text>
+  <canvas canvas-id="mychart-2" id="mychart-dom-bar"></canvas>
+</view>
